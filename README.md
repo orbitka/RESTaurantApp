@@ -11,9 +11,11 @@ The application is designed as a daily operation tool for waiters in a small res
   - orders.
 
 **Initial ERD (Entity Relationship Diagram):**
+
   ![ERD](RESTaurantApp - ERD.png)
 
   **Views:**
+
   ![ERD](RESTaurantApp - Views.png)
 
 **USER STORIES:**
