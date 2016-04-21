@@ -4,6 +4,9 @@ class UsersController < ApplicationController
     :index
   end
 
+  def log_in
+    @user = User.
+
 
   def new
     @user = User.new
@@ -23,9 +26,10 @@ class UsersController < ApplicationController
 
 end
 
-
-# root GET  /                    welcome#index
-# users GET  /users(.:format)     users#index
-#      POST /users(.:format)     users#create
-# new_user GET  /users/new(.:format) users#new
-# user GET  /users/:id(.:format) users#show
+#    root GET  /                        welcome#index
+#  log_in GET  /users/log_in(.:format)  users#log_in
+# profile GET  /users/profile(.:format) users#profile
+#   users GET  /users(.:format)         users#index
+#         POST /users(.:format)         users#create
+# new_user GET  /users/new(.:format)     users#new
+#    user GET  /users/:id(.:format)     users#show
