@@ -1,9 +1,25 @@
 class UsersController < ApplicationController
 
+  def index
+    :index
+  end
+
+
   def new
     @user = User.new
     redirect_to log_in path
   end
+
+  def create
+    User.create(user_params)
+
+  private
+
+  def user_params
+    params.require(:username, :password)
+  end
+
+
 
 end
 
