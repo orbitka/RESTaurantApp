@@ -11,10 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160422120106) do
+ActiveRecord::Schema.define(version: 20160422194435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bills", force: :cascade do |t|
+    t.integer  "order_id"
+    t.integer  "tablename_id"
+    t.integer  "user_id"
+    t.boolean  "paid",         default: false
+    t.boolean  "tip",          default: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  create_table "meals", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "bill_id"
+    t.integer  "meal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "orders", ["bill_id"], name: "index_orders_on_bill_id", using: :btree
+  add_index "orders", ["meal_id"], name: "index_orders_on_meal_id", using: :btree
+
+  create_table "tablenames", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "capacity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tables", force: :cascade do |t|
     t.integer  "table_number"
@@ -31,4 +66,6 @@ ActiveRecord::Schema.define(version: 20160422120106) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "orders", "bills"
+  add_foreign_key "orders", "meals"
 end

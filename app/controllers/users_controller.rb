@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   include SessionsHelper
 
   def index
-    :index
+    authenticate
+    @users = User.all
   end
 
   def log_in

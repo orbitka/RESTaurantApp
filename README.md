@@ -19,7 +19,7 @@ The application is designed as a daily operation tool for waiters in a small res
   ![ERD](RESTaurantApp - Views.png)
 
 **USER STORIES:**
-- As a waiter I want to be able to add/remove/modify tables so they reflect the current layout and I know where to deliver food and which bill belongs to which guest without memorizing bill numbers.
+- As a waiter I want to be able to see table names so I know where to deliver food and which bill belongs to which guest without memorizing bill numbers.
 - As a waiter I want to have login access so my data is confidential and protected.
 - As a waiter I want to see all my bills so I can see my daily sales.
 - As a restaurant manager I want to be able to add/modify/remove meals to the menu so we can sell them.

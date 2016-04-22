@@ -1,9 +1,11 @@
 <h1>Welcome <%= @user.username %></h1>
+<%= button_to "Log Out", '/sessions', method: :delete %>
 
-<h3>@@@This is profile page</h3>
+<h3>This is profile page</h3>
 <p>
   @@@add info about my name, performance and other stuff, do not forget to link the photo
 </p>
-
-
-<%= button_to "Log Out", '/sessions', method: :delete %>
+<h2>  <%= @user.username %></h2>
+<div class="profile_photo">
+  <%= image_tag @user.photo %>
+</div>

@@ -7,12 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p>
-  <%=  link_to "Waiters", users_path %>
-  <%=  link_to "Add new Waiters", new_user_path %>
-  <%=  link_to "Waiter profile", profile_path %>
+  <header>
+    <ul>
+      <li>    <%=  link_to "Waiters", users_path %></li>
+      <li>    <%=  link_to "My profile", profile_path %></li>
+      <li>    <%=  link_to "Table Names", tablenames_path %></li>
+      <li>    <%=  link_to "Bills", bills_path %></li>
+    </ul>
 
-</p>
+  </header>
 
 <%= yield %>
 
