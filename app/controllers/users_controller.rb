@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
 
-  include SessionsHelper
+  # include SessionsHelper
+
+  before_action :authenticate, except: [:log_in]
 
   def index
-    authenticate
+    # authenticate
     @users = User.all
   end
 
@@ -16,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   def profile
-    authenticate
+    # authenticate
     @user = current_user
   end
 

@@ -51,13 +51,6 @@ ActiveRecord::Schema.define(version: 20160422194435) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tables", force: :cascade do |t|
-    t.integer  "table_number"
-    t.integer  "capacity"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
