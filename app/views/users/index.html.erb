@@ -2,10 +2,13 @@
 
 <%=  link_to "Add new Waiters", new_user_path %>
 
+<ul>
+  <% @users.each do |user| %>
 
-<p>
-  @@@ come back here to fix the .each function
-</p>
+    <li><%= link_to user.username, profile_path %></li>
+
+  <% end %>
+</ul>
 
 
 
