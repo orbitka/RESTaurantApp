@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   # include SessionsHelper
 
-  before_action :authenticate, except: [:log_in]
+  before_action :authenticate, except: [:log_in, :new, :create]
 
   def index
     # authenticate
@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def profile
     # authenticate
     @user = current_user
@@ -27,6 +31,17 @@ class UsersController < ApplicationController
     User.create(user_params)
     redirect_to log_in_path
   end
+
+  def edit
+    @user = User.find params[:id]
+  end
+
+  def update
+    user = User.find params[:id]
+    user.update user_params
+    redirect_to user_path user.id
+  end
+
 
   private
 

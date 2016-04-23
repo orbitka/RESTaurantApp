@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bills</h1>
+<h1>All Bills</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Order</th>
-      <th>Tablename</th>
-      <th>User</th>
+      <th>Bill</th>
+      <th>Table</th>
+      <th>Waiter</th>
       <th>Paid</th>
       <th>Tip</th>
       <th colspan="3"></th>
@@ -18,7 +18,7 @@
     <% @bills.each do |bill| %>
       <tr>
         <td><%= bill.order_id %></td>
-        <td><%= bill.tablename_id %></td>
+        <td><%= bill.tablename.name %></td>
         <td><%= bill.user_id %></td>
         <td><%= bill.paid %></td>
         <td><%= bill.tip %></td>

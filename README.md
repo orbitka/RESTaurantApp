@@ -12,11 +12,11 @@ The application is designed as a daily operation tool for waiters in a small res
 
 **Initial ERD (Entity Relationship Diagram):**
 
-  ![ERD](RESTaurantApp - ERD.png)
+  ![ERD](app/assets/images/RESTaurantApp - ERD.png)
 
   **Views:**
 
-  ![ERD](RESTaurantApp - Views.png)
+  ![Views](app/assets/images/RESTaurantApp - Views.png)
 
 **USER STORIES:**
 - As a waiter I want to be able to see table names so I know where to deliver food and which bill belongs to which guest without memorizing bill numbers.
@@ -30,28 +30,29 @@ The application is designed as a daily operation tool for waiters in a small res
 
 - Login page:
 
-![Wireframe 1](Wireframe-1-welcome.png)
+![Wireframe 1](app/assets/images/Wireframe-1-welcome.png)
 
-- Main modules:
+- Main models:
 
-![Wireframe 2](Wireframe-2-models.png)
+![Wireframe 2](app/assets/images/Wireframe-2-models.png)
 
 - Index page in the module: Waiters
 
-![Wireframe 3](Wireframe-3-waiters.png)
+![Wireframe 3](app/assets/images/Wireframe-3-waiters.png)
 
 - Add new waiter
+  - (in this version we have only one type of users)
 
-![Wireframe 4](Wireframe-4-waiters-add_new.png)
+![Wireframe 4](app/assets/images/Wireframe-4-waiters-add_new.png)
 
 - Waiter profile
 
-![Wireframe 5](Wireframe-5-waiter-profile.png)
+![Wireframe 5](app/assets/images/Wireframe-5-waiter-profile.png)
 
 - Preview of 1 selected bill (with details)
 
-![Wireframe 6](Wireframe-6-selected_bill.png)
+![Wireframe 6](app/assets/images/Wireframe-6-selected_bill.png)
 
 - Edit page for the bill
 
-![Wireframe 7](Wireframe-7-edit_bill.png)
+![Wireframe 7](app/assets/images/Wireframe-7-edit_bill.png)

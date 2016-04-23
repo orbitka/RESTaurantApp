@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Order:</strong>
+  <b>Tablename:</b>
+  <%= @bill.tablename.name %> (id: <%= @bill.tablename_id %>)
+</p>
+
+<p>
+  <b>Order:</b>
   <%= @bill.order_id %>
 </p>
 
 <p>
-  <strong>Tablename:</strong>
-  <%= @bill.tablename_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
+  <b>User:</b>
   <%= @bill.user_id %>
 </p>
 
 <p>
-  <strong>Paid:</strong>
+  <b>Paid:</b>
   <%= @bill.paid %>
 </p>
 
