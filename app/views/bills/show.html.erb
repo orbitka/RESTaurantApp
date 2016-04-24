@@ -1,19 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Bill No.:</b>
+  <%= @bill.id %>
+</p>
+
+<p>
+  <b>Waiter id:</b>
+  <%= @bill.user_id %>
+</p>
+
+<p>
   <b>Tablename:</b>
   <%= @bill.tablename.name %> (id: <%= @bill.tablename_id %>)
 </p>
 
 <p>
   <b>Order:</b>
+  <%  %>
   <%= @bill.order_id %>
+
 </p>
 
-<p>
-  <b>User:</b>
-  <%= @bill.user_id %>
-</p>
+<p>=======here to paste all orders==========</p>
+
+
+<p>=======end of testing==========</p>
 
 <p>
   <b>Paid:</b>
@@ -26,4 +38,4 @@
 </p>
 
 <%= link_to 'Edit', edit_bill_path(@bill) %> |
-<%= link_to 'Back', bills_path %>
+<%= link_to 'All bills', bills_path %>

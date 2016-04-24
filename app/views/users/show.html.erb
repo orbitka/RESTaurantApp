@@ -1,12 +1,48 @@
-<h3>Profile Page:</h3>
 <h1><%= @user.username %></h1>
+<h3>(Waiter id: <%= @user.id %>) </h3>
 
-<div class="profile_photo">
-  <p>@@@here the photo should come</p>
+<hr>
+<b><p>Open bills:</p></b>
+<hr>
 
-  <%= @user.photo %>
-</div>
+<table>
+  <tbody>
+    <% @bills.where('paid' => false ).each do |bill| %>
+      <tr>
+        <td>Bill No:<%= bill.id %></td>
+        <td>Table: <%= bill.tablename_id%></td>
+        <td>Paid: <%= bill.paid %></td>
+        <td>Tip: <%= bill.tip %></td>
+        <td><%= link_to 'Show', bill %></td>
+        <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+        <td><%= link_to 'Delete', bill, method: :delete, data: { confirm: 'Are you sure you want to delete paid bill?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<hr>
+<b><p>Closed bills:</p></b>
+<hr>
+<table>
+  <tbody>
+    <% @bills.where('paid' => true ).each do |bill| %>
+      <tr>
+        <td>Bill No:<%= bill.id %></td>
+        <td>Table: <%= bill.tablename_id%></td>
+        <td>Paid: <%= bill.paid %></td>
+        <td>Tip: <%= bill.tip %></td>
+        <td><%= link_to 'Show', bill %></td>
+        <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+        <td><%= link_to 'Delete', bill, method: :delete, data: { confirm: 'Are you sure you want to delete paid bill?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<hr>
+<%= link_to 'Edit waiter', edit_user_path(@user) %> |
+<%= link_to 'All waiters', users_path %>
