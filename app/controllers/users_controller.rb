@@ -23,7 +23,6 @@ class UsersController < ApplicationController
   end
 
   def profile
-    # authenticate
     @user = current_user
   end
 
