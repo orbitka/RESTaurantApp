@@ -1,7 +1,6 @@
 class CreateBills < ActiveRecord::Migration
   def change
     create_table :bills do |t|
-      t.integer :order_id
       t.integer :tablename_id
       t.integer :user_id
       t.boolean :paid, :default => false

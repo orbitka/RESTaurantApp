@@ -1,13 +1,10 @@
 <h1>You are logged in as "<%= @user.username %>"</h1>
 <h3>Your id: <%= @user.id %></h3>
 
+<hr>
 <%= button_to "Log Out", '/sessions', method: :delete %>
-<hr><hr>
-<h3>This is your profile page</h3>
-<p>
-  You can add info about your name, performance and other stuff you would like to share with others
-</p>
 
-
-<hr><hr>
-<%= link_to 'Edit', edit_user_path(@user) %> |<%= link_to 'All waiters', users_path %>
+<hr>
+<%= link_to 'Change password', edit_user_path(@user) %> | <%= link_to 'All waiters', users_path %>
+<hr>
+<img src="/assets/lbdm--003.jpg" alt="trio" />

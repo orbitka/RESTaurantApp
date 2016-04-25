@@ -16,18 +16,24 @@
 html {
   max-width: 600px;
   margin: auto;
+  background-color: lavender;
 }
 
 body {
-  background-color: #fff;
+  background-color: beige;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding: 5px;
+  border: 15px darkcyan;
+  border-style: outset;
 }
 
 header {
-  background-color: magenta;
+  background-color: fuchsia;
+  padding: 5px;
+  text-decoration: none;
  }
 
 header ul {
@@ -36,9 +42,7 @@ header ul {
 }
 
 header li {
-  color: white;
   text-align: center;
-  list-style-type: none;
 }
 
 header h5 {
@@ -68,6 +72,7 @@ table {
 table, th, td {
     border: 1px solid black;
     padding: 5px 10px;
+    background-color: white;
 }
 
 
@@ -75,6 +80,10 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+img {
+  width: 100%;
+  align: center;
 }
 
 pre {
@@ -84,14 +93,16 @@ pre {
 }
 
 a {
-  color: #000;
+  color: blue;
+  text-decoration: none;
+  text-shadow: 10px;
 
   &:visited {
-    color: #666;
+    color: darkred;
   }
 
   &:hover {
-    color: #fff;
+    color: red;
     background-color: #000;
   }
 }

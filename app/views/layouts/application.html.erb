@@ -13,19 +13,20 @@
     |
     <%=  link_to "Log in", log_in_path %>
     |
-    <%=  link_to "Waiters", users_path %>
-    |
     <%=  link_to "My profile", profile_path %>
+    |
+    <%=  link_to "Waiters", users_path %>
     |
     <%=  link_to "Tables", tablenames_path %>
     |
     <%=  link_to "Bills", bills_path %>
     |
-    <%=  link_to "Meals", meals_path %>
-    |
     <%=  link_to "Orders", orders_path %>
     |
+    <%=  link_to "Meals", meals_path %>
+    <hr>
     <%= button_to "Log Out", '/sessions', method: :delete %>
+
   </h5>
 
   </header>

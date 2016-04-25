@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
 
   def show
     @orders = Order.where(bill_id: params[:id])
-
+    @meal = Meal.where(order_id: params[:id])
   end
 
   def new

@@ -1,11 +1,12 @@
-<h1>Listing Waiters</h1>
+<h1>All Waiters</h1>
 
 <%=  link_to "Add new Waiter", new_user_path %>
 
 <ul>
   <% @users.each do |user| %>
 
-    <li>(id:<%= link_to user.id, user_path(user) %>) - <%= link_to user.username, user_path(user) %></li>
+    <li>id:<%= link_to user.id, user_path(user) %> - <%= link_to user.username, user_path(user) %></li>
 
   <% end %>
 </ul>
+<img src="/assets/lbdm-opening_ceremony-38.jpg" alt="lbdm-staff" />

@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>id</th>
       <th>Name</th>
       <th>Price</th>
       <th>Description</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @meals.each do |meal| %>
       <tr>
+        <td><%= meal.id %></td>
         <td><%= meal.name %></td>
         <td><%= meal.price %></td>
         <td><%= meal.description %></td>
@@ -29,3 +31,5 @@
 <br>
 
 <%= link_to 'New Meal', new_meal_path %>
+<hr>
+<img src="/assets/lbdm-menu--2011.jpg" alt="menu" />

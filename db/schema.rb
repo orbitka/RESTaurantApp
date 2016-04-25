@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20160424185820) do
   enable_extension "plpgsql"
 
   create_table "bills", force: :cascade do |t|
-    t.integer  "order_id"
     t.integer  "tablename_id"
     t.integer  "user_id"
     t.boolean  "paid",         default: false
@@ -37,9 +36,9 @@ ActiveRecord::Schema.define(version: 20160424185820) do
   create_table "orders", force: :cascade do |t|
     t.integer  "bill_id"
     t.integer  "meal_id"
-    t.boolean  "delivered"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "delivered",  default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "tablenames", force: :cascade do |t|
@@ -52,7 +51,6 @@ ActiveRecord::Schema.define(version: 20160424185820) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
-    t.string   "photo"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
