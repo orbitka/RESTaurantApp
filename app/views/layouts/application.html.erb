@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h5>
+    <h3>
     <%=  link_to "Home", root_path %>
     |
     <%=  link_to "Log in", log_in_path %>
@@ -25,9 +25,10 @@
     |
     <%=  link_to "Meals", meals_path %>
     <hr>
+  </h3>
     <%= button_to "Log Out", '/sessions', method: :delete %>
 
-  </h5>
+
 
   </header>
 
