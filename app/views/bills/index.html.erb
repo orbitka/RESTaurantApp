@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 <h1>All Bills</h1>
+<%= link_to 'New Bill', new_bill_path %>
 
 <hr>
 <h3>OPEN BILLS:</h3>
@@ -9,8 +10,8 @@
   <thead>
     <tr>
       <th>Bill No.</th>
-      <th>Table id</th>
-      <th>Waiter id</th>
+      <th>Table</th>
+      <th>Waiter</th>
       <th>Paid</th>
       <th>Tip</th>
       <th>Created</th>
@@ -23,8 +24,8 @@
     <% @bills.where('paid' => false ).each do |bill| %>
       <tr>
         <td><%= bill.id %></td>
-        <td><%= link_to bill.tablename_id, tablename_path(bill.tablename_id) %></td>
-        <td><%= link_to bill.user_id, user_path(bill.user_id) %></td>
+        <td><%= link_to bill.tablename.name, tablename_path(bill.tablename_id) %></td>
+        <td><%= link_to bill.user.username, user_path(bill.user_id) %></td>
         <td><%= bill.paid %></td>
         <td><%= bill.tip %></td>
         <td><%= bill.created_at %></td>
@@ -44,8 +45,8 @@
   <thead>
     <tr>
       <th>Bill No.</th>
-      <th>Table id</th>
-      <th>Waiter id</th>
+      <th>Table</th>
+      <th>Waiter</th>
       <th>Paid</th>
       <th>Tip</th>
       <th>Created</th>
@@ -58,8 +59,8 @@
     <% @bills.where('paid' => true ).each do |bill| %>
       <tr>
         <td><%= bill.id %></td>
-        <td><%= link_to bill.tablename_id, tablename_path(bill.tablename_id) %></td>
-        <td><%= link_to bill.user_id, user_path(bill.user_id) %></td>
+        <td><%= link_to bill.tablename.name, tablename_path(bill.tablename_id) %></td>
+        <td><%= link_to bill.user.username, user_path(bill.user_id) %></td>
         <td><%= bill.paid %></td>
         <td><%= bill.tip %></td>
         <td><%= bill.created_at %></td>
@@ -70,8 +71,5 @@
     <% end %>
   </tbody>
 </table>
-<br>
-
-<%= link_to 'New Bill', new_bill_path %>
 <hr>
 <img src="https://orbitka.files.wordpress.com/2016/04/lbdm-004.jpg" alt="bodeguita - hall" />

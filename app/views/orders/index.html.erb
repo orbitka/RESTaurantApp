@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>All Orders</h1>
+
+<%= link_to 'New Order', new_order_path %>
+
+
 <hr>
 <p>PENDING ORDERS: </p>
 <hr>
@@ -8,7 +12,8 @@
 <table>
   <thead>
     <tr>
-      <th>Bill</th>
+      <th>Bill #</th>
+      <th>Order #</th>
       <th>Meal</th>
       <th>Delivered</th>
       <th>Ordered at:</th>
@@ -20,7 +25,8 @@
     <% @orders.where('delivered' => false ).each do |order| %>
       <tr>
         <td><%= link_to order.bill_id, bill_path(order.bill_id) %></td>
-        <td><%= link_to order.meal_id, meal_path(order.meal_id) %></td>
+        <td><%= link_to order.id, order_path(order.id) %></td>
+        <td><%= link_to order.meal.name, meal_path(order.meal.id) %></td>
         <td><%= order.delivered %></td>
         <td><%= order.created_at %></td>
         <td><%= link_to 'Show', order %></td>
@@ -37,7 +43,8 @@
 <table>
   <thead>
     <tr>
-      <th>Bill</th>
+      <th>Bill #</th>
+      <th>Order #</th>
       <th>Meal</th>
       <th>Delivered</th>
       <th>Ordered at:</th>
@@ -49,7 +56,8 @@
     <% @orders.where('delivered' => true ).each do |order| %>
       <tr>
         <td><%= link_to order.bill_id, bill_path(order.bill_id) %></td>
-        <td><%= link_to order.meal_id, meal_path(order.meal_id) %></td>
+        <td><%= link_to order.id, order_path(order.id) %></td>
+        <td><%= link_to order.meal.name, meal_path(order.meal.id) %></td>
         <td><%= order.delivered %></td>
         <td><%= order.created_at %></td>
         <td><%= link_to 'Show', order %></td>
@@ -60,8 +68,5 @@
   </tbody>
 </table>
 
-<hr>
-
-<%= link_to 'New Order', new_order_path %>
 <hr>
 <img src="https://orbitka.files.wordpress.com/2016/04/lbdm-food.jpg" alt="dinner plate" />

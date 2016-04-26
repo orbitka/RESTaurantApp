@@ -1,4 +1,4 @@
 class Order < ActiveRecord::Base
   belongs_to :bill
-  has_one :meal
+  belongs_to :meal
 end

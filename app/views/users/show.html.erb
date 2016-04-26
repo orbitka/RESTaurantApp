@@ -30,7 +30,7 @@
     <% @bills.where('paid' => true ).each do |bill| %>
       <tr>
         <td>Bill No:<%= bill.id %></td>
-        <td>Table: <%= bill.tablename_id%></td>
+        <td>Table: <%= bill.tablename.name%></td>
         <td>Paid: <%= bill.paid %></td>
         <td>Tip: <%= bill.tip %></td>
         <td><%= link_to 'Show', bill %></td>

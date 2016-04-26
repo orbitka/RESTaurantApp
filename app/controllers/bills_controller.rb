@@ -7,7 +7,7 @@ class BillsController < ApplicationController
   end
 
   def show
-    @bills = Bill.where(user_id: params[:id])
+    @bills = Bill.find (params[:id])
   end
 
   def new
