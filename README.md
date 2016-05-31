@@ -2,6 +2,8 @@ RESTaurant App
 
 The application is designed as a daily operation tool for waiters in a small restaurant.
 
+App on heroku: https://restaurant-orbitka.herokuapp.com/  
+
 **Basic features**
 
 - We cover interactions between 4 basic models:
