@@ -58,3 +58,4 @@ App on heroku: https://restaurant-orbitka.herokuapp.com/
 - Edit page for the bill
 
 ![Wireframe 7](app/assets/images/Wireframe-7-edit_bill.png)
+tbc
